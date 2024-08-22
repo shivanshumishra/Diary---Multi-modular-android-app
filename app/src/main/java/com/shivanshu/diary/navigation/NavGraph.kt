@@ -7,6 +7,7 @@ import androidx.navigation.NavType
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.navArgument
+import com.shivanshu.diary.presentation.screens.auth.AuthenticationScreen
 import com.shivanshu.diary.utils.Constants.WRITE_SCREEN_ARGUMENT_KEY
 
 @Composable
@@ -30,7 +31,11 @@ fun NavGraphBuilder.authenticationRoute() {
             nullable = true
         })
     ) {
+        AuthenticationScreen(
+            loadingState = false
+        ) {
 
+        }
     }
 }
 
